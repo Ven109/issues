@@ -26,7 +26,7 @@ defmodule Issues.CLI do
     |> decode_response()
     |> sort_into_descending_order()
     |> last(count)
-    |> Issues.TableFormatter.format([:number, :created_at, :title])
+    |> Issues.TableFormatter.format(["number", "created_at", "title"])
   end
 
   def last(list, count) do
